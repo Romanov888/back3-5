@@ -1,3 +1,29 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    birth_year INT NOT NULL,
+    gender ENUM('male', 'female') NOT NULL,
+    bio TEXT NOT NULL,
+    contract BOOLEAN NOT NULL
+);
+ 
+CREATE TABLE languages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    language_name VARCHAR(255) NOT NULL
+);
+ 
+ 
+CREATE TABLE user_languages (
+    user_id INT NOT NULL,
+    language_id INT NOT NULL,
+    PRIMARY KEY (user_id, language_id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (language_id) REFERENCES languages(id)
+);
+
+INSERT INTO languages (language_name) VALUES ('Pascal'), ('C'), ('C++'), ('JavaScript'), ('PHP'), ('Python'), ('Java'), ('Haskell'), ('Clojure'), ('Prolog'), ('Scala');
+
 CREATE TABLE user_auth (     
 user_id INT PRIMARY KEY,     
 login VARCHAR(10) NOT NULL UNIQUE,     
