@@ -7,9 +7,9 @@ if (!isset($_SESSION['user_id'])) {
 }
  
 $servername = "localhost";
-$username = "u52981";
-$password = "6580876";
-$dbname = "u52981";
+$username = "";
+$password = "";
+$dbname = "";
  
 //
 try {
