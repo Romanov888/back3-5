@@ -37,9 +37,9 @@ function getFieldValue($fieldName)
 
 // Настройки подключения к базе данных
 $servername = "localhost";
-$username = "u52981";
-$password = "6580876";
-$dbname = "u52981";
+$username = "";
+$password = "";
+$dbname = "";
 
 // Создание подключения
 try {
