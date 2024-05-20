@@ -2,9 +2,9 @@
 session_start();
  
 $servername = "localhost";
-$username = "u52981";
-$password = "6580876";
-$dbname = "u52981";
+$username = "";
+$password = "";
+$dbname = "";
  
 // Создание подключения
 try {
